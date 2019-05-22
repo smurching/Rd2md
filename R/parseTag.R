@@ -48,7 +48,7 @@ parseTag <- function(x
 		}
 		# only internal markdown links, referenced with #
 		x <- paste0("[", pre, parseTag(x[[1]], stripNewline=stripNewline), post, "](#", 
-			gsub(" ", "_", gsub("_", "", tolower(parseTag(x[[1]], stripNewline=stripNewline)))), ")")
+			gsub(" ", "_", gsub("_", "-", tolower(parseTag(x[[1]], stripNewline=stripNewline)))), ")")
 	} else if (rdtag == "\\url") {
 		x <- paste0("[", pre, as.character(x), post, "](", as.character(x), ")")
 	} else if (rdtag == "\\href") {

@@ -3,5 +3,6 @@
 .RData
 .project
 .Rproj
+.idea
 inst/doc
 
